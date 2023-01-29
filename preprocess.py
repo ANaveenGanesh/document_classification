@@ -1,10 +1,3 @@
-"""
-Author: Aditya Kumar
-Email: aditya00kumar@gmail.com
-Description: Contains all text pre-processing functions
-Project: document_classification
-Last Modified: 1/8/18 3:10 PM
-"""
 
 import html
 import string
