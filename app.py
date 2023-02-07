@@ -1,11 +1,4 @@
-"""
-Author: Aditya Kumar
-Email: aditya00kumar@gmail.com
-Description: App file for flask module contains functionality of training the classifier by just uploading the
-training file in user interface and selecting the proper parameters.
-Project: document_classification
-Last Modified: 1/8/18 3:10 PM
-"""
+
 
 import ast
 import configparser
