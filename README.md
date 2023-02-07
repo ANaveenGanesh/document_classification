@@ -1,48 +1,48 @@
 # document_classification
-This project is an attempt to provide a generic pipeline for document classification using different machine learning
- models which can be hosted on any cloud service without any difficulty. This repo is connected to heroku cloud 
- and it has been hosted as an flask app https://nlp-pipe.herokuapp.com/.
+This project is an attempt to provide a generic pipeline for document classification using various machine learning models 
+ that can be hosted in any cloud service without  difficulty. This repository is connected to the heroku cloud 
+ and is hosted as a pipe app at https://nlp-pipe.herokuapp.com/. 
  
- Features of this project are following:
- - Online training of models using custom training data provided by user.
- - Define the split ratio for training and validation of result. By default 80-20 split has been provided.
- - Visualize the results and get pickle file for trained model.
- - Use pickle file of model to do prediction.
+ This project features the following: 
+ - Online training of models using custom training data provided by the user. 
+ - Adjust the  training and result validation split. The default  split is 80-20. 
+ - Display the results and get the pickle file for the trained model. 
+ - Use model spike file for prediction.
 
-## Features
-- Below mentioned following functionalities are provided as an flask app and can be hosted on any cloud platform.
-- This repo is directly connected to heroku platform and hence any new push to repo will result the changes to be 
-reflected in Heroku app in real time hosted at https://nlp-pipe.herokuapp.com/.
-- Initially it takes time to start the heroku instance, once up it can be used and UI will be displayed like where
-![Screenshot](static/Screenshots/NLP.png "Main Page")
-1. Upload User input in csv file having two columns namely document and category
-2. Feature Engineering
-	- [X] Removing english stop words i.e. sklearn stopwords
-	- [X] Stemming and lemmatization
-	- [X] TF-IDF
-	- [] Word2Vec
-3. Model Building using default params
-	- Naive-Bayes
-	- SVM
-	- Random forest
-	- Nearest Neighbors
-    - Linear SVM
-    - Decision Tree
-    - Random Forest
-    - Neural Net
-    
-     Training of all models (even single model sometimes) takes more than 30 seconds for large dataset. Free version
-     of Heroku instance doesn't support that. If you really want to test the app you can host it on AWS or mail me.
-4. Test the result of models by providing text input.
-5. Deployment of each model as an API.
+## Features 
+ - The following features below are delivered as a bottle application and can be hosted on any cloud platform. 
+ - This repository is directly connected to the Heroku platform, so any new commit to the repository will cause changes to be  reflected in the 
+ Heroku app in real time  at https://nlp-pipe.herokuapp.com/. 
+ - At first, the heroku instance takes time to start, when it can be used, and the interface is shown as 
+ ![Screenshot](static/Screenshots/NLP.png "Main") 
+ 1. Load the user input as two. -column csv file, viz document and class 
+ 2. Feature Engineering 
+ - [X] Removal of English stop words ie. sklearn stop words 
+ - [X] derivation and lemmatization 
+ - [X] TF-IDF 
+ - [] Word2
+3.  Building a model with default parameters 
+ - Naive-Bayes 
+ - SVM 
+ - Random Forest 
+ - Nearest Neighbors 
+ - Linear SVM 
+ - Decision Tree 
+ - Random Forest 
+ - Neural Network 
+ Training of all models (even single model sometimes) takes more than 30 seconds for large dataset.The free version of Heroku instance 
+ does not support it. If you really want to test the app, you can host it on AWS or send me an email.
+ 4. Test the results of the models by entering text. 
+ 5. Implement each model as an API.
 
-## Running on AWS
-1. Install all the packages using `pip3 install -r requirements.txt`
-2. `sudo python3 -m nltk.downloader -d /usr/share/nltk_data`
-3. Then download all-corpora and stopwords
-4. Run the flask app using `sudo python3 -m flask run --host=0.0.0.0 --port=80`.
-5. App can be opened on public ip provided in aws console.
-
+##Running on AWS
+ 1. Install all  packages with `pip3 install -r requirements.txt` 
+ 2. `sudo python3 -m nltk.downloader -d /usr/share/nltk_data` 
+   corpora 
+ 3. Then load all and stop words 
+ 4. Run the flask application with `sudo python3 -m flask run --host=0.0.0.0 --port=80`. 
+ 5. The application can be opened with the public IP address in the aws console.
+ 
 ## Using gunicorn and nginx (needs to be configured properly for AWS machine)
 1. `pip install gunicorn`
 2. `sudo apt-get install nginx`
@@ -51,15 +51,15 @@ reflected in Heroku app in real time hosted at https://nlp-pipe.herokuapp.com/.
 5. `gunicorn app:app -b localhost:8000 &`
 
 
-##  Task List
-  - Make an api for pickle files to be consumed.
-  - Deployment of each model as an API and provide an end point for user.
-  - Make trained model files downloadable to user.
-
-### Contact:
-You are welcome to contribute to the project, please send a pull request with proper feature description.
-For any suggestion/clarification please raise an issue in git.
-
+## Task List 
+ - Make the API files consumable. 
+ - Implement each template as an API and provide an endpoint to the user. 
+ - Make trained model files downloadable for users.
+ 
+### Contact details: 
+ You are invited to participate in the project,  send a pull request with the corresponding description of the function. 
+ Please raise an issue in git for suggestions/clarifications.
+ 
 ### References:
  - https://pyliaorachel.github.io/blog/tech/system/2017/07/07/flask-app-with-gunicorn-on-nginx-server-upon-aws-ec2-linux.html
  - http://nginx.org/en/docs/beginners_guide.html#conf_structure
