@@ -51,14 +51,6 @@ This project is an attempt to provide a generic pipeline for document classifica
 5. `gunicorn app:app -b localhost:8000 &`
 
 
-## Task List 
- - Make the API files consumable. 
- - Implement each template as an API and provide an endpoint to the user. 
- - Make trained model files downloadable for users.
- 
-### Contact details: 
- You are invited to participate in the project,  send a pull request with the corresponding description of the function. 
- Please raise an issue in git for suggestions/clarifications.
  
 ### References:
  - https://pyliaorachel.github.io/blog/tech/system/2017/07/07/flask-app-with-gunicorn-on-nginx-server-upon-aws-ec2-linux.html
