@@ -43,13 +43,6 @@ This project is an attempt to provide a generic pipeline for document classifica
  4. Run the flask application with `sudo python3 -m flask run --host=0.0.0.0 --port=80`. 
  5. The application can be opened with the public IP address in the aws console.
  
-## Using gunicorn and nginx (needs to be configured properly for AWS machine)
-1. `pip install gunicorn`
-2. `sudo apt-get install nginx`
-3. To start nginx server `sudo /etc/init.d/nginx start`
-4. `sudo apt-get install gunicorn3`
-5. `gunicorn app:app -b localhost:8000 &`
-
 
  
 ### References:
